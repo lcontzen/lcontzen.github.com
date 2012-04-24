@@ -4,7 +4,7 @@
   <title><![CDATA[Laurent's blog]]></title>
   <link href="http://lcontzen.github.com/atom.xml" rel="self"/>
   <link href="http://lcontzen.github.com/"/>
-  <updated>2012-04-24T19:06:20+02:00</updated>
+  <updated>2012-04-24T19:17:15+02:00</updated>
   <id>http://lcontzen.github.com/</id>
   <author>
     <name><![CDATA[Laurent Contzen]]></name>
@@ -19,6 +19,11 @@
     <updated>2012-04-24T19:01:00+02:00</updated>
     <id>http://lcontzen.github.com/blog/2012/04/24/hello-world</id>
     <content type="html"><![CDATA[<p>Hello, this is the classic first blog post.</p>
+
+<p>Test Modification</p>
+
+<blockquote><p>Ohai</p></blockquote>
+
 
 <p>More coming later!</p>
 ]]></content>
