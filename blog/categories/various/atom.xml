@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: various | Laurent's blog]]></title>
+  <link href="http://lcontzen.github.com/blog/categories/various/atom.xml" rel="self"/>
+  <link href="http://lcontzen.github.com/"/>
+  <updated>2012-05-11T12:41:40+02:00</updated>
+  <id>http://lcontzen.github.com/</id>
+  <author>
+    <name><![CDATA[Laurent Contzen]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Hello World]]></title>
+    <link href="http://lcontzen.github.com/blog/2012/04/24/hello-world/"/>
+    <updated>2012-04-24T19:01:00+02:00</updated>
+    <id>http://lcontzen.github.com/blog/2012/04/24/hello-world</id>
+    <content type="html"><![CDATA[<p>Welcome to my blog! I'm a belgian student studying Sciences and Technologies of Information and Communication at the <a href="http://www.ulb.ac.be">Free University of Brussels (Université Libre de Bruxelles)</a>. I'm a GNU/Linux user since 2005 and I've been using <a href="http://archlinux.org">Arch Linux</a> for a few years now.</p>
+
+<p>My proposal to create a new library providing models and widgets to display and choose contacts in GNOME has been accepted as a Google Summer of Code and I'm very excited about it. This proposal will be detailed in my next post.</p>
+
+<p>This blog's content will probably be mainly related to the work I'll do for this GSoC but if I have anything else interesting to post I won't hesitate.</p>
+
+<p>On a side note, this blog is powered by <a href="http://octopress.org">Octopress</a> and hosted (at least for now) on Github pages.</p>
+]]></content>
+  </entry>
+  
+</feed>
