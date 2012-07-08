@@ -4,7 +4,7 @@
   <title><![CDATA[Category: gsoc | Laurent's blog]]></title>
   <link href="http://lcontzen.github.com/blog/categories/gsoc/atom.xml" rel="self"/>
   <link href="http://lcontzen.github.com/"/>
-  <updated>2012-06-27T13:13:04+02:00</updated>
+  <updated>2012-07-08T12:58:17+02:00</updated>
   <id>http://lcontzen.github.com/</id>
   <author>
     <name><![CDATA[Laurent Contzen]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Weekly report #2]]></title>
+    <link href="http://lcontzen.github.com/blog/2012/07/08/weekly-report-number-2/"/>
+    <updated>2012-07-08T12:42:00+02:00</updated>
+    <id>http://lcontzen.github.com/blog/2012/07/08/weekly-report-number-2</id>
+    <content type="html"><![CDATA[<p>Time flies and it's already time for this second weekly report. Since my last report, I successfully ported empathy-nautilus-sendto plugin to use the RosterView (<a href="https://bugzilla.gnome.org/show_bug.cgi?id=678875">bug #678875</a>). I then immerged myself in FolksIndivual's code to try to add a new display_name field (I haven't completed this yet).</p>
+
+<p>I've also begun creating empathy-roster-model, the model designed to be used along with the RosterView. The model will be modular thanks to the use of interfaces. I'm populating the model along with it's first implementation : empathy-roster-model-manager using an EmpathyIndividualManager.</p>
+
+<p>I've created a branch on github where I push my work : <a href="https://github.com/lcontzen/empathy">lcontzen/empathy</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Weekly report #1 : Finally started]]></title>
