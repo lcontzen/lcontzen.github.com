@@ -4,7 +4,7 @@
   <title><![CDATA[Laurent's blog]]></title>
   <link href="http://lcontzen.github.com/atom.xml" rel="self"/>
   <link href="http://lcontzen.github.com/"/>
-  <updated>2012-07-08T12:58:17+02:00</updated>
+  <updated>2012-07-14T16:36:47+02:00</updated>
   <id>http://lcontzen.github.com/</id>
   <author>
     <name><![CDATA[Laurent Contzen]]></name>
@@ -12,6 +12,28 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Weekly Report #3 : My holidays coding station]]></title>
+    <link href="http://lcontzen.github.com/blog/2012/07/14/weekly-report-number-3-my-holidays-coding-station/"/>
+    <updated>2012-07-14T15:11:00+02:00</updated>
+    <id>http://lcontzen.github.com/blog/2012/07/14/weekly-report-number-3-my-holidays-coding-station</id>
+    <content type="html"><![CDATA[<p><a href="http://laurentc.be/pics/blog/panorama.jpg"><img src="http://laurentc.be/pics/blog/panorama.jpg" title="Panorama around the chalet" alt="Panorama around the chalet"></a></p>
+
+<p>As the title suggests, I&#8217;m on holidays in the French Alps. This doesn&#8217;t mean that my GSoC is on hold, but it means that I&#8217;m enjoying a beautifull sight while coding :</p>
+
+<p><a href="http://laurentc.be/pics/blog/station.jpg"><img class="center" src="http://laurentc.be/pics/blog/station_small.jpg" title="Holidays coding station" alt="Holidays coding station"></a></p>
+
+<p>During this week, I&#8217;ve continued my work on EmpathyRosterModel and EmpathyRosterModelManager. The model now catches all the signals emitted by the manager previously catched by the view. It also now have all the functions needed to be able to completely rely on the model and remove every manager references in the view. As said in my previous post, all of this is pushed on github : <a href="https://github.com/lcontzen/empathy">lcontzen/empathy</a>.</p>
+
+<p>On a side note, I found out that if all your top contacts are offline the group name isn&#8217;t displayed and the top contacts are lost alone on the top of the roster. I reported it and submitted a patch fixing this behavior (<a href="https://bugzilla.gnome.org/show_bug.cgi?id=679868">bug #679868</a>) (this still needs to be reviewed).</p>
+
+<p>PS : <a href="http://www.youtube.com/watch?v=1D1cap6yETA">Good news, everyone!</a> I passed my Midterm Evaluation! \o/</p>
+
+<p>Bonus : a better picture of the beautifull sight :
+<a href="http://laurentc.be/pics/blog/view.jpg"><img class="center" src="http://laurentc.be/pics/blog/view_small.jpg" title="&#34;A better picture of the sight &#34;A better picture of the sight&#34;" alt="&#34;A better picture of the sight &#34;A better picture of the sight&#34;"></a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Weekly report #2]]></title>
