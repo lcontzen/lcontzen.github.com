@@ -4,7 +4,7 @@
   <title><![CDATA[Category: gsoc | Laurent's blog]]></title>
   <link href="http://lcontzen.github.com/blog/categories/gsoc/atom.xml" rel="self"/>
   <link href="http://lcontzen.github.com/"/>
-  <updated>2012-07-14T16:36:47+02:00</updated>
+  <updated>2012-07-24T14:07:07+02:00</updated>
   <id>http://lcontzen.github.com/</id>
   <author>
     <name><![CDATA[Laurent Contzen]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Weekly Report #4]]></title>
+    <link href="http://lcontzen.github.com/blog/2012/07/24/weekly-report-number-4/"/>
+    <updated>2012-07-24T13:48:00+02:00</updated>
+    <id>http://lcontzen.github.com/blog/2012/07/24/weekly-report-number-4</id>
+    <content type="html"><![CDATA[<p>This week my work on the model started to be merged in master!</p>
+
+<p>Before coming back to Brussels I continued moving logic from the view into the model. I then reviewed my patches, submitted them on bugzilla (<a href="https://bugzilla.gnome.org/show_bug.cgi?id=680302">Bug #680302</a>) and those patches were merged into master \o/. I also documented my public API for gtk-doc.</p>
+
+<p>My patch for the bug I mentionned last week about the top contacts group name has been reviewed, corrected and merged.</p>
+
+<p>I'm now going to go on on my work on the model and dive back into FolksIndividual's code to try to complete my patch for the new display_name property.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Weekly Report #3 : My holidays coding station]]></title>
@@ -73,44 +88,6 @@
 <p>This blog will be the place to follow my progress all along this exciting summer.</p>
 
 <p>Stay tuned!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[My GSoC Proposal]]></title>
-    <link href="http://lcontzen.github.com/blog/2012/04/25/my-gsoc-proposal/"/>
-    <updated>2012-04-25T14:51:00+02:00</updated>
-    <id>http://lcontzen.github.com/blog/2012/04/25/my-gsoc-proposal</id>
-    <content type="html"><![CDATA[<p>As mentionned before, I've been accepted to do a Google Summer of Code for <a href="http://www.gnome.org">GNOME</a>. My <a href="http://www.google-melange.com/gsoc/proposal/review/google/gsoc2012/lcontzen/1">proposal</a> is about the creation of a new library providing models and widgets to display and choose contacts. For those who don't want to read the complete proposal here are the interesting bits :</p>
-
-<h3>What is the ultimate goal of your proposal?</h3>
-
-<p>The ultimate goal of my proposal is to develop a new C library providing models and Gtk+ widgets to display and choose contacts that could be used by any GNOME application, a feature that Empathy's developers are considering to implement since a long time.  It has been discussed last year during the IM/Social Hackfest and <a href="https://live.gnome.org/Hackfests/IMContacts%20Social2011/Tasks/ContactChooserDesign">some notes are available on the wiki</a>.</p>
-
-<p>The contact chooser would be integrable in a lot of GNOME application or plugins such as Nautilus-sendto, the Shell's contact search engine, Evolution (which could begin to use Folks and allow to send mails to IM contacts), or any GNOME application which could benefit from IM integration using Telepathy tubes for example.
-The library will be usable in C, Python and Javascript thanks to the GObject Introspection support.</p>
-
-<h3>What components/modules will the proposed work modify or create?</h3>
-
-<p>A model of the loaded contacts will be developed and widgets will be built on top of it. This will be developed as a new library that other projects will be able to use. This library will probably be named Folks-gtk, but this name might change during the development if we find a cooler one.
-The API will mainly provide :<br/>
-  -Functionalities to fetch and display all contacts from Folks<br/>
-  -An API to define if one or more contacts can be picked<br/>
-  -An API to let the user filter out contacts<br/>
-  -Helper code for some common filters (like online contacts)</p>
-
-<p>This will, obviously, be related to Empathy, Telepathy and Folks. To validate the library and its API, Empathy's nautilus-sendto plugin will be modified to make use of it. If time permits, I'll also modify Shell's contact search feature to use it as well.</p>
-
-<h3>What benefits does your proposed work have for GNOME and its community?</h3>
-
-<ul>
-<li><p><em>IM integration and Telepathy tubes :</em><br/>
-This contact chooser I'm proposing to implement here would help improving IM's integration in the whole GNOME desktop experience. Whatever the application is and whatever the developer wants to do involving IM contacts, he won't have to think about the way to choose contacts or struggle implementing it. Of course, it's not only valuable for developers but it's also profitable for the end users since more applications could start offering more social features.<br/>
-Even if Telepathy tubes have been implemented several years ago they are only quite rarely used in GNOME. Vinagre/Vino use them for Empathy's desktop sharing, a really popular and innovating feature, but that's about it. There are at least two reasons which could explain this : the first is that tubes are quite difficult to use, and the second is the difficulty to fetch and present the list of contacts (needed in almost any application implementing social features). Telepathy's team is working to fix the first problem (telepathy-glib now has high level tubes API) and my project would fix the second one.</p></li>
-<li><p><em>Contacts coherence :</em><br/>
-Since GNOME 3.2, gnome-contacts defined a new way to display contacts in GNOME. Empathy's developers are working with the design team to re-design Empathy's contact list to make it more coherent with the rest of the desktop (see <a href="https://bugzilla.gnome.org/show_bug.cgi?id=669484">bug #669484</a>). If more applications are going to integrate social features it's important to stay coherent and offer a coherent way to display contacts in the whole GNOME desktop.</p></li>
-</ul>
-
 ]]></content>
   </entry>
   
