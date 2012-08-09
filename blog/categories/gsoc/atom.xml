@@ -4,7 +4,7 @@
   <title><![CDATA[Category: gsoc | Laurent's blog]]></title>
   <link href="http://lcontzen.github.com/blog/categories/gsoc/atom.xml" rel="self"/>
   <link href="http://lcontzen.github.com/"/>
-  <updated>2012-08-01T16:32:01+02:00</updated>
+  <updated>2012-08-09T16:34:02+02:00</updated>
   <id>http://lcontzen.github.com/</id>
   <author>
     <name><![CDATA[Laurent Contzen]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Weekly Report #6]]></title>
+    <link href="http://lcontzen.github.com/blog/2012/08/09/weekly-report-number-6/"/>
+    <updated>2012-08-09T16:24:00+02:00</updated>
+    <id>http://lcontzen.github.com/blog/2012/08/09/weekly-report-number-6</id>
+    <content type="html"><![CDATA[<p>This week, I finally finished the work to move the model logic out of EmpathyRosterView (<a href="https://bugzilla.gnome.org/show_bug.cgi?id=680302">bug #680302</a>) and all of this has been merged into master.</p>
+
+<p>I then started to work on a new implementation of the EmpathyRosterModel interface : EmpathyRosterModelAggregator. This is of course pushed as a branch on my github account : <a href="https://github.com/lcontzen/empathy/commits/aggregator">https://github.com/lcontzen/empathy/commits/aggregator</a>.</p>
+
+<p>Quite short post, but quite satisfying pogress.</p>
+
+<p>PS: My mentor <a href="http://blog.desmottes.be/">Guillaume Desmottes</a> gave me my printed copy of the GNOME Outreach Program Yearbook 2012. It's even better than in PDF!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Weekly Report #5]]></title>
@@ -73,19 +88,6 @@
 <p>I've also begun creating empathy-roster-model, the model designed to be used along with the RosterView. The model will be modular thanks to the use of interfaces. I'm populating the model along with it's first implementation : empathy-roster-model-manager using an EmpathyIndividualManager.</p>
 
 <p>I've created a branch on github where I push my work : <a href="https://github.com/lcontzen/empathy">lcontzen/empathy</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Weekly report #1 : Finally started]]></title>
-    <link href="http://lcontzen.github.com/blog/2012/06/27/weekly-report-number-1-finally-started/"/>
-    <updated>2012-06-27T12:16:00+02:00</updated>
-    <id>http://lcontzen.github.com/blog/2012/06/27/weekly-report-number-1-finally-started</id>
-    <content type="html"><![CDATA[<p>I've finished my exams at my University last week, which means I've finally been able to get started on my GSoC serious business.</p>
-
-<p>After getting on grips with jhbuild and empathy's new parts like the <a href="http://blog.desmottes.be/post/2012/06/15/New-Empathy-contact-list">new roster</a>, I fixed <a href="https://bugzilla.gnome.org/show_bug.cgi?id=678376">bug #678376</a> by making ungroupped contacts being displayed at the bottom of the roster before fixing <a href="https://bugzilla.gnome.org/show_bug.cgi?id=678156">bug #678156</a> by re-implementing the People Nearby group feature.</p>
-
-<p>I'm now working on porting empathy-nautilus-sendto plugin to use a RosterView instead of a EmpathyContactChooser (<a href="https://bugzilla.gnome.org/show_bug.cgi?id=678875">bug #678875</a>).</p>
 ]]></content>
   </entry>
   

@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Weekly Report #3 : My holidays coding station - Laurent's blog</title>
+  <title>Weekly Report #6 - Laurent's blog</title>
   <meta name="author" content="Laurent Contzen">
 
   
-  <meta name="description" content="As the title suggests, I&#8217;m on holidays in the French Alps. This doesn&#8217;t mean that my GSoC is on hold, but it means that I&#8217;m &hellip;">
+  <meta name="description" content="This week, I finally finished the work to move the model logic out of EmpathyRosterView (bug #680302) and all of this has been merged into master. I &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://lcontzen.github.com/blog/2012/07/14/weekly-report-number-3-my-holidays-coding-station">
+  <link rel="canonical" href="http://lcontzen.github.com/blog/2012/08/09/weekly-report-number-6">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -65,7 +65,7 @@
   
   <header>
     
-      <h1 class="entry-title">Weekly Report #3 : My Holidays Coding Station</h1>
+      <h1 class="entry-title">Weekly Report #6</h1>
     
     
       <p class="meta">
@@ -81,27 +81,20 @@
   
 
 
-<time datetime="2012-07-14T15:11:00+02:00" pubdate data-updated="true">Jul 14<span>th</span>, 2012</time>
+<time datetime="2012-08-09T16:24:00+02:00" pubdate data-updated="true">Aug 9<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p><a href="http://laurentc.be/pics/blog/panorama.jpg"><img src="http://laurentc.be/pics/blog/panorama.jpg" title="Panorama around the chalet" alt="Panorama around the chalet"></a></p>
+<div class="entry-content"><p>This week, I finally finished the work to move the model logic out of EmpathyRosterView (<a href="https://bugzilla.gnome.org/show_bug.cgi?id=680302">bug #680302</a>) and all of this has been merged into master.</p>
 
-<p>As the title suggests, I&#8217;m on holidays in the French Alps. This doesn&#8217;t mean that my GSoC is on hold, but it means that I&#8217;m enjoying a beautifull sight while coding :</p>
+<p>I then started to work on a new implementation of the EmpathyRosterModel interface : EmpathyRosterModelAggregator. This is of course pushed as a branch on my github account : <a href="https://github.com/lcontzen/empathy/commits/aggregator">https://github.com/lcontzen/empathy/commits/aggregator</a>.</p>
 
-<p><a href="http://laurentc.be/pics/blog/station.jpg"><img class="center" src="http://laurentc.be/pics/blog/station_small.jpg" title="Holidays coding station" alt="Holidays coding station"></a></p>
+<p>Quite short post, but quite satisfying pogress.</p>
 
-<p>During this week, I&#8217;ve continued my work on EmpathyRosterModel and EmpathyRosterModelManager. The model now catches all the signals emitted by the manager previously catched by the view. It also now have all the functions needed to be able to completely rely on the model and remove every manager references in the view. As said in my previous post, all of this is pushed on github : <a href="https://github.com/lcontzen/empathy">lcontzen/empathy</a>.</p>
-
-<p>On a side note, I found out that if all your top contacts are offline the group name isn&#8217;t displayed and the top contacts are lost alone on the top of the roster. I reported it and submitted a patch fixing this behavior (<a href="https://bugzilla.gnome.org/show_bug.cgi?id=679868">bug #679868</a>) (this still needs to be reviewed).</p>
-
-<p>PS : <a href="http://www.youtube.com/watch?v=1D1cap6yETA">Good news, everyone!</a> I passed my Midterm Evaluation! \o/</p>
-
-<p>Bonus : a better picture of the beautifull sight :
-<a href="http://laurentc.be/pics/blog/view.jpg"><img class="center" src="http://laurentc.be/pics/blog/view_small.jpg" title="&#34;A better picture of the sight &#34;A better picture of the sight&#34;" alt="&#34;A better picture of the sight &#34;A better picture of the sight&#34;"></a></p>
+<p>PS: My mentor <a href="http://blog.desmottes.be/">Guillaume Desmottes</a> gave me my printed copy of the GNOME Outreach Program Yearbook 2012. It&#8217;s even better than in PDF!</p>
 </div>
 
 
@@ -124,7 +117,7 @@
   
 
 
-<time datetime="2012-07-14T15:11:00+02:00" pubdate data-updated="true">Jul 14<span>th</span>, 2012</time>
+<time datetime="2012-08-09T16:24:00+02:00" pubdate data-updated="true">Aug 9<span>th</span>, 2012</time>
       
 
 <span class="categories">
@@ -138,7 +131,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://lcontzen.github.com/blog/2012/07/14/weekly-report-number-3-my-holidays-coding-station/" data-via="lcontzen" data-counturl="http://lcontzen.github.com/blog/2012/07/14/weekly-report-number-3-my-holidays-coding-station/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://lcontzen.github.com/blog/2012/08/09/weekly-report-number-6/" data-via="lcontzen" data-counturl="http://lcontzen.github.com/blog/2012/08/09/weekly-report-number-6/" >Tweet</a>
   
   
   
@@ -147,10 +140,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/07/08/weekly-report-number-2/" title="Previous Post: Weekly report #2">&laquo; Weekly report #2</a>
+        <a class="basic-alignment left" href="/blog/2012/08/01/weekly-report-number-5/" title="Previous Post: Weekly Report #5">&laquo; Weekly Report #5</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/07/24/weekly-report-number-4/" title="Next Post: Weekly Report #4">Weekly Report #4 &raquo;</a>
       
     </p>
   </footer>
@@ -233,8 +224,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://lcontzen.github.com/blog/2012/07/14/weekly-report-number-3-my-holidays-coding-station/';
-        var disqus_url = 'http://lcontzen.github.com/blog/2012/07/14/weekly-report-number-3-my-holidays-coding-station/';
+        var disqus_identifier = 'http://lcontzen.github.com/blog/2012/08/09/weekly-report-number-6/';
+        var disqus_url = 'http://lcontzen.github.com/blog/2012/08/09/weekly-report-number-6/';
         var disqus_script = 'embed.js';
       
     (function () {
