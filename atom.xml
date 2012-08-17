@@ -4,7 +4,7 @@
   <title><![CDATA[Laurent's blog]]></title>
   <link href="http://lcontzen.github.com/atom.xml" rel="self"/>
   <link href="http://lcontzen.github.com/"/>
-  <updated>2012-08-09T16:34:02+02:00</updated>
+  <updated>2012-08-17T10:15:15+02:00</updated>
   <id>http://lcontzen.github.com/</id>
   <author>
     <name><![CDATA[Laurent Contzen]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Weekly Report #7]]></title>
+    <link href="http://lcontzen.github.com/blog/2012/08/17/weekly-report-number-7/"/>
+    <updated>2012-08-17T09:57:00+02:00</updated>
+    <id>http://lcontzen.github.com/blog/2012/08/17/weekly-report-number-7</id>
+    <content type="html"><![CDATA[<p>After finishing my new EmpathyRosterModelAggregator implementation of the EmpathyRosterModel interface (<a href="https://github.com/lcontzen/empathy/tree/aggregator">aggregator branch in my github repo</a>), I moved all the concerned files to a new directory to have them as a new private library ((<a href="https://github.com/lcontzen/empathy/tree/libroster">libroster branch in my github repo</a>)). This is still in Empathy&#8217;s tree, but it&#8217;s ready to be transformed as an external lib.</p>
+
+<p>I then started writing documentation with gtk-doc (<a href="https://github.com/lcontzen/empathy/tree/libroster-docs">libroster-docs branch in my github repo</a>). I lost a few days to get it working &#8220;thanks&#8221; to the fact that I passed &#8211;enable-gtk-docs to autogen.sh instead of &#8211;enable-gtk-doc. What a wonderful example of a PEBCAK error that can drive you insane.</p>
+
+<p>I&#8217;m now going to finish the docs before trying to bind my library to GObject-Introspection. I&#8217;m also going to update my page on live.gnome.org and prepare my final GSoC blogpost.</p>
+
+<p>Little spoiler about this blogpost: This GSoC has been an awesome experience.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Weekly Report #6]]></title>

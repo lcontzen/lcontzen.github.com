@@ -9,7 +9,7 @@
   <meta name="author" content="Laurent Contzen">
 
   
-  <meta name="description" content="This week, I finally finished the work to move the model logic out of EmpathyRosterView (bug #680302) and all of this has been merged into master. I &hellip;">
+  <meta name="description" content="After finishing my new EmpathyRosterModelAggregator implementation of the EmpathyRosterModel interface (aggregator branch in my github repo), I moved &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -62,6 +62,48 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/17/weekly-report-number-7/">Weekly Report #7</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-17T09:57:00+02:00" pubdate data-updated="true">Aug 17<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>After finishing my new EmpathyRosterModelAggregator implementation of the EmpathyRosterModel interface (<a href="https://github.com/lcontzen/empathy/tree/aggregator">aggregator branch in my github repo</a>), I moved all the concerned files to a new directory to have them as a new private library ((<a href="https://github.com/lcontzen/empathy/tree/libroster">libroster branch in my github repo</a>)). This is still in Empathy&#8217;s tree, but it&#8217;s ready to be transformed as an external lib.</p>
+
+<p>I then started writing documentation with gtk-doc (<a href="https://github.com/lcontzen/empathy/tree/libroster-docs">libroster-docs branch in my github repo</a>). I lost a few days to get it working &#8220;thanks&#8221; to the fact that I passed &#8211;enable-gtk-docs to autogen.sh instead of &#8211;enable-gtk-doc. What a wonderful example of a PEBCAK error that can drive you insane.</p>
+
+<p>I&#8217;m now going to finish the docs before trying to bind my library to GObject-Introspection. I&#8217;m also going to update my page on live.gnome.org and prepare my final GSoC blogpost.</p>
+
+<p>Little spoiler about this blogpost: This GSoC has been an awesome experience.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -478,6 +520,10 @@ Since GNOME 3.2, gnome-contacts defined a new way to display contacts in GNOME. 
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/08/17/weekly-report-number-7/">Weekly Report #7</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/08/09/weekly-report-number-6/">Weekly Report #6</a>
       </li>
     
@@ -491,10 +537,6 @@ Since GNOME 3.2, gnome-contacts defined a new way to display contacts in GNOME. 
     
       <li class="post">
         <a href="/blog/2012/07/14/weekly-report-number-3-my-holidays-coding-station/">Weekly Report #3 : My holidays coding station</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/07/08/weekly-report-number-2/">Weekly report #2</a>
       </li>
     
   </ul>

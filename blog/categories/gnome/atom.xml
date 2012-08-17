@@ -4,7 +4,7 @@
   <title><![CDATA[Category: gnome | Laurent's blog]]></title>
   <link href="http://lcontzen.github.com/blog/categories/gnome/atom.xml" rel="self"/>
   <link href="http://lcontzen.github.com/"/>
-  <updated>2012-08-09T16:34:02+02:00</updated>
+  <updated>2012-08-17T10:15:15+02:00</updated>
   <id>http://lcontzen.github.com/</id>
   <author>
     <name><![CDATA[Laurent Contzen]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Weekly Report #7]]></title>
+    <link href="http://lcontzen.github.com/blog/2012/08/17/weekly-report-number-7/"/>
+    <updated>2012-08-17T09:57:00+02:00</updated>
+    <id>http://lcontzen.github.com/blog/2012/08/17/weekly-report-number-7</id>
+    <content type="html"><![CDATA[<p>After finishing my new EmpathyRosterModelAggregator implementation of the EmpathyRosterModel interface (<a href="https://github.com/lcontzen/empathy/tree/aggregator">aggregator branch in my github repo</a>), I moved all the concerned files to a new directory to have them as a new private library ((<a href="https://github.com/lcontzen/empathy/tree/libroster">libroster branch in my github repo</a>)). This is still in Empathy's tree, but it's ready to be transformed as an external lib.</p>
+
+<p>I then started writing documentation with gtk-doc (<a href="https://github.com/lcontzen/empathy/tree/libroster-docs">libroster-docs branch in my github repo</a>). I lost a few days to get it working "thanks" to the fact that I passed --enable-gtk-docs to autogen.sh instead of --enable-gtk-doc. What a wonderful example of a PEBCAK error that can drive you insane.</p>
+
+<p>I'm now going to finish the docs before trying to bind my library to GObject-Introspection. I'm also going to update my page on live.gnome.org and prepare my final GSoC blogpost.</p>
+
+<p>Little spoiler about this blogpost: This GSoC has been an awesome experience.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Weekly Report #6]]></title>
@@ -75,19 +90,6 @@
 
 <p>Bonus : a better picture of the beautifull sight :
 <a href="http://laurentc.be/pics/blog/view.jpg"><img class="center" src="http://laurentc.be/pics/blog/view_small.jpg" title="&#34;A better picture of the sight &#34;A better picture of the sight&#34;" alt="&#34;A better picture of the sight &#34;A better picture of the sight&#34;"></a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Weekly report #2]]></title>
-    <link href="http://lcontzen.github.com/blog/2012/07/08/weekly-report-number-2/"/>
-    <updated>2012-07-08T12:42:00+02:00</updated>
-    <id>http://lcontzen.github.com/blog/2012/07/08/weekly-report-number-2</id>
-    <content type="html"><![CDATA[<p>Time flies and it's already time for this second weekly report. Since my last report, I successfully ported empathy-nautilus-sendto plugin to use the RosterView (<a href="https://bugzilla.gnome.org/show_bug.cgi?id=678875">bug #678875</a>). I then immerged myself in FolksIndivual's code to try to add a new display_name field (I haven't completed this yet).</p>
-
-<p>I've also begun creating empathy-roster-model, the model designed to be used along with the RosterView. The model will be modular thanks to the use of interfaces. I'm populating the model along with it's first implementation : empathy-roster-model-manager using an EmpathyIndividualManager.</p>
-
-<p>I've created a branch on github where I push my work : <a href="https://github.com/lcontzen/empathy">lcontzen/empathy</a>.</p>
 ]]></content>
   </entry>
   

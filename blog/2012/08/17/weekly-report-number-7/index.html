@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Weekly Report #6 - Laurent's blog</title>
+  <title>Weekly Report #7 - Laurent's blog</title>
   <meta name="author" content="Laurent Contzen">
 
   
-  <meta name="description" content="This week, I finally finished the work to move the model logic out of EmpathyRosterView (bug #680302) and all of this has been merged into master. I &hellip;">
+  <meta name="description" content="After finishing my new EmpathyRosterModelAggregator implementation of the EmpathyRosterModel interface (aggregator branch in my github repo), I moved &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://lcontzen.github.com/blog/2012/08/09/weekly-report-number-6">
+  <link rel="canonical" href="http://lcontzen.github.com/blog/2012/08/17/weekly-report-number-7">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -65,7 +65,7 @@
   
   <header>
     
-      <h1 class="entry-title">Weekly Report #6</h1>
+      <h1 class="entry-title">Weekly Report #7</h1>
     
     
       <p class="meta">
@@ -81,20 +81,20 @@
   
 
 
-<time datetime="2012-08-09T16:24:00+02:00" pubdate data-updated="true">Aug 9<span>th</span>, 2012</time>
+<time datetime="2012-08-17T09:57:00+02:00" pubdate data-updated="true">Aug 17<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>This week, I finally finished the work to move the model logic out of EmpathyRosterView (<a href="https://bugzilla.gnome.org/show_bug.cgi?id=680302">bug #680302</a>) and all of this has been merged into master.</p>
+<div class="entry-content"><p>After finishing my new EmpathyRosterModelAggregator implementation of the EmpathyRosterModel interface (<a href="https://github.com/lcontzen/empathy/tree/aggregator">aggregator branch in my github repo</a>), I moved all the concerned files to a new directory to have them as a new private library ((<a href="https://github.com/lcontzen/empathy/tree/libroster">libroster branch in my github repo</a>)). This is still in Empathy&#8217;s tree, but it&#8217;s ready to be transformed as an external lib.</p>
 
-<p>I then started to work on a new implementation of the EmpathyRosterModel interface : EmpathyRosterModelAggregator. This is of course pushed as a branch on my github account : <a href="https://github.com/lcontzen/empathy/commits/aggregator">https://github.com/lcontzen/empathy/commits/aggregator</a>.</p>
+<p>I then started writing documentation with gtk-doc (<a href="https://github.com/lcontzen/empathy/tree/libroster-docs">libroster-docs branch in my github repo</a>). I lost a few days to get it working &#8220;thanks&#8221; to the fact that I passed &#8211;enable-gtk-docs to autogen.sh instead of &#8211;enable-gtk-doc. What a wonderful example of a PEBCAK error that can drive you insane.</p>
 
-<p>Quite short post, but quite satisfying pogress.</p>
+<p>I&#8217;m now going to finish the docs before trying to bind my library to GObject-Introspection. I&#8217;m also going to update my page on live.gnome.org and prepare my final GSoC blogpost.</p>
 
-<p>PS: My mentor <a href="http://blog.desmottes.be/">Guillaume Desmottes</a> gave me my printed copy of the GNOME Outreach Program Yearbook 2012. It&#8217;s even better than in PDF!</p>
+<p>Little spoiler about this blogpost: This GSoC has been an awesome experience.</p>
 </div>
 
 
@@ -117,7 +117,7 @@
   
 
 
-<time datetime="2012-08-09T16:24:00+02:00" pubdate data-updated="true">Aug 9<span>th</span>, 2012</time>
+<time datetime="2012-08-17T09:57:00+02:00" pubdate data-updated="true">Aug 17<span>th</span>, 2012</time>
       
 
 <span class="categories">
@@ -131,7 +131,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://lcontzen.github.com/blog/2012/08/09/weekly-report-number-6/" data-via="lcontzen" data-counturl="http://lcontzen.github.com/blog/2012/08/09/weekly-report-number-6/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://lcontzen.github.com/blog/2012/08/17/weekly-report-number-7/" data-via="lcontzen" data-counturl="http://lcontzen.github.com/blog/2012/08/17/weekly-report-number-7/" >Tweet</a>
   
   
   
@@ -140,10 +140,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/08/01/weekly-report-number-5/" title="Previous Post: Weekly Report #5">&laquo; Weekly Report #5</a>
+        <a class="basic-alignment left" href="/blog/2012/08/09/weekly-report-number-6/" title="Previous Post: Weekly Report #6">&laquo; Weekly Report #6</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/08/17/weekly-report-number-7/" title="Next Post: Weekly Report #7">Weekly Report #7 &raquo;</a>
       
     </p>
   </footer>
@@ -226,8 +224,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://lcontzen.github.com/blog/2012/08/09/weekly-report-number-6/';
-        var disqus_url = 'http://lcontzen.github.com/blog/2012/08/09/weekly-report-number-6/';
+        var disqus_identifier = 'http://lcontzen.github.com/blog/2012/08/17/weekly-report-number-7/';
+        var disqus_url = 'http://lcontzen.github.com/blog/2012/08/17/weekly-report-number-7/';
         var disqus_script = 'embed.js';
       
     (function () {
