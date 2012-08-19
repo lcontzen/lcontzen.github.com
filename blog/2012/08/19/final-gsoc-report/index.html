@@ -1,0 +1,356 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Final GSoC Report - Laurent's blog</title>
+  <meta name="author" content="Laurent Contzen">
+
+  
+  <meta name="description" content="Wait, august 19th? Where&#8217;s my summer? I feel like i just started this GSoC! Alas, it&#8217;s already coming to an end. Those two month have &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://lcontzen.github.com/blog/2012/08/19/final-gsoc-report">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Laurent's blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Laurent's blog</a></h1>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:lcontzen.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Final GSoC Report</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-19T13:03:00+02:00" pubdate data-updated="true">Aug 19<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Wait, august 19th? Where&#8217;s my summer? I feel like i just started this GSoC!</p>
+
+<p>Alas, it&#8217;s already coming to an end. Those two month have been amazing. Let&#8217;s head back and summarize what I&#8217;ve been doing during this time.</p>
+
+<h3>1. The Proposal</h3>
+
+<p>When I felt I was going to pass my exams and thus was going to have an
+exams-free summer, I knew I had to seize the opportunity to try to be selected
+for a GSoC. I talked about it with <a href="http://blog.desmottes.be/">Guillaume Desmottes</a>
+and we got to the idea of my <a href="http://www.google-melange.com/gsoc/proposal/review/google/gsoc2012/lcontzen/1">proposal</a>.</p>
+
+<p>I was really happy to be selected and looking forward to the end of my exams
+to start working.</p>
+
+<h3>2. The Work&#8217;s Beginning</h3>
+
+<p>Around mid june it was finally time to get started. As I stated in <a href="http://blog.laurentc.be/blog/2012/06/27/weekly-report-number-1-finally-started/">my first weekly report</a>,
+I begun by fixing some bugs to get in touch with Empathy&#8217;s code base. I then
+ported empathy-nautilus-sendto to the RosterView instead of
+EmpathyContactChooser.</p>
+
+<p>It&#8217;s worth noting that Guillaume&#8217;s work on the RosterView between my proposal
+and my work&#8217;s beginning quite modified the initial planning.</p>
+
+<h3>3. The Model</h3>
+
+<p>The next step of my work was one of the most important : I created
+empathy-roster-model and empathy-roster-model-manager and moved all the logic
+out of the view to the model. This took longer than what Guillaume and I thought
+initially, but it got merged into master around the beginning of august.</p>
+
+<p>During the model&#8217;s development I created a new test app in which I created 2
+views using the same model. This helped me understanding what goal Guillaume
+wanted me to achieve here.</p>
+
+<h3>4. The ModelAggregator</h3>
+
+<p>empathy-roster-model-manager worked great for Empathy but it was way too
+Empathy specific to be usable elsewhere. Since the ultimate goal of the project
+is to create a library that any project could use I created
+empathy-roster-model-aggregator, a new implementation of empathy-roster-model
+relying on FolksIndividualAggregator.</p>
+
+<h3>5. A New Internal Lib</h3>
+
+<p>Once empathy-roster-model-aggregator was done and working as it should, I moved
+the view, the model (along with model-aggregator, but not model-manager) and
+various needed tools like EmpathyRosterContact or EmpathyRosterGroup to a new
+directory inside Empathy&#8217;s tree.</p>
+
+<p>This is one step closer to the goal of the external library.</p>
+
+<h3>6. Gtk-doc and GIR</h3>
+
+<p>If we want this library to be widely used along GNOME projects, it had to be
+documented. I therefore added gtk-doc to the project and wrote some doc.</p>
+
+<p>Using Gobject-introspection was also one step in the roadmap. I discovered how
+gir functions, created EmpathyRoster-0.1.gir and wrote a small example test app
+in Python.</p>
+
+<h3>7. The Future</h3>
+
+<p>So, what&#8217;s left to do?</p>
+
+<ul>
+<li>A part of my code has yet to be reviewed, Guillaume being on holidays.</li>
+<li>The library should be moved out of Empathy&#8217;s tree.</li>
+<li>The gir annotations should be completed to eliminate warnings.</li>
+<li>There&#8217;s probably more doc to write.</li>
+</ul>
+
+
+<h3>8. The Asides</h3>
+
+<p>In addition to what I&#8217;ve already talked about I also worked on other things. One
+of the most tiring ones was idling on a lot of new IRC channels. I also fixed a
+few bugs in Empathy and worked on a patch for Folks.</p>
+
+<p>Unlike what I feared, I found myself quite enjoying writing my Weekly Reports.
+It was a nice way to have to take time to evaluate the week&#8217;s productivity.</p>
+
+<h3>9. The Results</h3>
+
+<p>To sum things up, let&#8217;s say that :</p>
+
+<ul>
+<li>My coding skills have dramatically improved</li>
+<li>I finally contributed to Open Source Software</li>
+<li>I&#8217;ve had the best conceivable summer job. Not once did I start to work
+feeling I &#8220;had to&#8221; (excepted maybe for the doc writing step, let&#8217;s be honest).</li>
+<li>I&#8217;ve acquired more knowledge about the various aspects of software development
+(at least regarding GNOME softwares).</li>
+<li>I&#8217;ve lost time on really stupid errors.</li>
+<li>I&#8217;m quite satisfied of my work.</li>
+<li>I have more IRC chans to idle on.</li>
+<li>I plan to continue coding and contributing.</li>
+</ul>
+
+
+<p>TL;DR: Amazing experience. 10/10, would do again.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Laurent Contzen</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-19T13:03:00+02:00" pubdate data-updated="true">Aug 19<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/gnome/'>gnome</a>, <a class='category' href='/blog/categories/gsoc/'>gsoc</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://lcontzen.github.com/blog/2012/08/19/final-gsoc-report/" data-via="lcontzen" data-counturl="http://lcontzen.github.com/blog/2012/08/19/final-gsoc-report/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/08/17/weekly-report-number-7/" title="Previous Post: Weekly Report #7">&laquo; Weekly Report #7</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <img src="http://laurentc.be/pics/hackergotchi_gnome.png" />
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/08/19/final-gsoc-report/">Final GSoC Report</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/17/weekly-report-number-7/">Weekly Report #7</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/09/weekly-report-number-6/">Weekly Report #6</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/01/weekly-report-number-5/">Weekly Report #5</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/24/weekly-report-number-4/">Weekly Report #4</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("lcontzen", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/lcontzen" class="twitter-follow-button" data-show-count="false">Follow @lcontzen</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Laurent Contzen -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'laurentsblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://lcontzen.github.com/blog/2012/08/19/final-gsoc-report/';
+        var disqus_url = 'http://lcontzen.github.com/blog/2012/08/19/final-gsoc-report/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

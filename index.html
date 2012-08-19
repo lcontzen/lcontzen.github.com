@@ -9,7 +9,7 @@
   <meta name="author" content="Laurent Contzen">
 
   
-  <meta name="description" content="After finishing my new EmpathyRosterModelAggregator implementation of the EmpathyRosterModel interface (aggregator branch in my github repo), I moved &hellip;">
+  <meta name="description" content="Wait, august 19th? Where&#8217;s my summer? I feel like i just started this GSoC! Alas, it&#8217;s already coming to an end. Those two month have &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -62,6 +62,142 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/19/final-gsoc-report/">Final GSoC Report</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-19T13:03:00+02:00" pubdate data-updated="true">Aug 19<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Wait, august 19th? Where&#8217;s my summer? I feel like i just started this GSoC!</p>
+
+<p>Alas, it&#8217;s already coming to an end. Those two month have been amazing. Let&#8217;s head back and summarize what I&#8217;ve been doing during this time.</p>
+
+<h3>1. The Proposal</h3>
+
+<p>When I felt I was going to pass my exams and thus was going to have an
+exams-free summer, I knew I had to seize the opportunity to try to be selected
+for a GSoC. I talked about it with <a href="http://blog.desmottes.be/">Guillaume Desmottes</a>
+and we got to the idea of my <a href="http://www.google-melange.com/gsoc/proposal/review/google/gsoc2012/lcontzen/1">proposal</a>.</p>
+
+<p>I was really happy to be selected and looking forward to the end of my exams
+to start working.</p>
+
+<h3>2. The Work&#8217;s Beginning</h3>
+
+<p>Around mid june it was finally time to get started. As I stated in <a href="http://blog.laurentc.be/blog/2012/06/27/weekly-report-number-1-finally-started/">my first weekly report</a>,
+I begun by fixing some bugs to get in touch with Empathy&#8217;s code base. I then
+ported empathy-nautilus-sendto to the RosterView instead of
+EmpathyContactChooser.</p>
+
+<p>It&#8217;s worth noting that Guillaume&#8217;s work on the RosterView between my proposal
+and my work&#8217;s beginning quite modified the initial planning.</p>
+
+<h3>3. The Model</h3>
+
+<p>The next step of my work was one of the most important : I created
+empathy-roster-model and empathy-roster-model-manager and moved all the logic
+out of the view to the model. This took longer than what Guillaume and I thought
+initially, but it got merged into master around the beginning of august.</p>
+
+<p>During the model&#8217;s development I created a new test app in which I created 2
+views using the same model. This helped me understanding what goal Guillaume
+wanted me to achieve here.</p>
+
+<h3>4. The ModelAggregator</h3>
+
+<p>empathy-roster-model-manager worked great for Empathy but it was way too
+Empathy specific to be usable elsewhere. Since the ultimate goal of the project
+is to create a library that any project could use I created
+empathy-roster-model-aggregator, a new implementation of empathy-roster-model
+relying on FolksIndividualAggregator.</p>
+
+<h3>5. A New Internal Lib</h3>
+
+<p>Once empathy-roster-model-aggregator was done and working as it should, I moved
+the view, the model (along with model-aggregator, but not model-manager) and
+various needed tools like EmpathyRosterContact or EmpathyRosterGroup to a new
+directory inside Empathy&#8217;s tree.</p>
+
+<p>This is one step closer to the goal of the external library.</p>
+
+<h3>6. Gtk-doc and GIR</h3>
+
+<p>If we want this library to be widely used along GNOME projects, it had to be
+documented. I therefore added gtk-doc to the project and wrote some doc.</p>
+
+<p>Using Gobject-introspection was also one step in the roadmap. I discovered how
+gir functions, created EmpathyRoster-0.1.gir and wrote a small example test app
+in Python.</p>
+
+<h3>7. The Future</h3>
+
+<p>So, what&#8217;s left to do?</p>
+
+<ul>
+<li>A part of my code has yet to be reviewed, Guillaume being on holidays.</li>
+<li>The library should be moved out of Empathy&#8217;s tree.</li>
+<li>The gir annotations should be completed to eliminate warnings.</li>
+<li>There&#8217;s probably more doc to write.</li>
+</ul>
+
+
+<h3>8. The Asides</h3>
+
+<p>In addition to what I&#8217;ve already talked about I also worked on other things. One
+of the most tiring ones was idling on a lot of new IRC channels. I also fixed a
+few bugs in Empathy and worked on a patch for Folks.</p>
+
+<p>Unlike what I feared, I found myself quite enjoying writing my Weekly Reports.
+It was a nice way to have to take time to evaluate the week&#8217;s productivity.</p>
+
+<h3>9. The Results</h3>
+
+<p>To sum things up, let&#8217;s say that :</p>
+
+<ul>
+<li>My coding skills have dramatically improved</li>
+<li>I finally contributed to Open Source Software</li>
+<li>I&#8217;ve had the best conceivable summer job. Not once did I start to work
+feeling I &#8220;had to&#8221; (excepted maybe for the doc writing step, let&#8217;s be honest).</li>
+<li>I&#8217;ve acquired more knowledge about the various aspects of software development
+(at least regarding GNOME softwares).</li>
+<li>I&#8217;ve lost time on really stupid errors.</li>
+<li>I&#8217;m quite satisfied of my work.</li>
+<li>I have more IRC chans to idle on.</li>
+<li>I plan to continue coding and contributing.</li>
+</ul>
+
+
+<p>TL;DR: Amazing experience. 10/10, would do again.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -465,49 +601,9 @@ Since GNOME 3.2, gnome-contacts defined a new way to display contacts in GNOME. 
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/04/24/hello-world/">Hello World</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-04-24T19:01:00+02:00" pubdate data-updated="true">Apr 24<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Welcome to my blog! I&#8217;m a belgian student studying Sciences and Technologies of Information and Communication at the <a href="http://www.ulb.ac.be">Free University of Brussels (Université Libre de Bruxelles)</a>. I&#8217;m a GNU/Linux user since 2005 and I&#8217;ve been using <a href="http://archlinux.org">Arch Linux</a> for a few years now.</p>
-
-<p>My proposal to create a new library providing models and widgets to display and choose contacts in GNOME has been accepted as a Google Summer of Code and I&#8217;m very excited about it. This proposal will be detailed in my next post.</p>
-
-<p>This blog&#8217;s content will probably be mainly related to the work I&#8217;ll do for this GSoC but if I have anything else interesting to post I won&#8217;t hesitate.</p>
-
-<p>On a side note, this blog is powered by <a href="http://octopress.org">Octopress</a> and hosted (at least for now) on Github pages.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
+    
+      <a class="prev" href="/blog/page/2/">&larr; Older</a>
     
     <a href="/blog/archives">Blog Archives</a>
     
@@ -523,6 +619,10 @@ Since GNOME 3.2, gnome-contacts defined a new way to display contacts in GNOME. 
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/08/19/final-gsoc-report/">Final GSoC Report</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/08/17/weekly-report-number-7/">Weekly Report #7</a>
       </li>
     
@@ -536,10 +636,6 @@ Since GNOME 3.2, gnome-contacts defined a new way to display contacts in GNOME. 
     
       <li class="post">
         <a href="/blog/2012/07/24/weekly-report-number-4/">Weekly Report #4</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/07/14/weekly-report-number-3-my-holidays-coding-station/">Weekly Report #3 : My holidays coding station</a>
       </li>
     
   </ul>
